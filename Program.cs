@@ -6,7 +6,7 @@ namespace Console_Hero_Game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
