@@ -5,7 +5,7 @@ Simple game to level up skills in a C# programming language
 
 1. Create Hero class with fields:
    - nickname
-   - exerience
+   - experience
    - number of kills
    - level (depends on experience)
   
