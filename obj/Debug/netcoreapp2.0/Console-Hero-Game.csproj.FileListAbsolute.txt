@@ -1,0 +1,11 @@
+C:\examples\ConsoleHeroGame\Console-Hero-Game\bin\Debug\netcoreapp2.0\Console-Hero-Game.deps.json
+C:\examples\ConsoleHeroGame\Console-Hero-Game\bin\Debug\netcoreapp2.0\Console-Hero-Game.runtimeconfig.json
+C:\examples\ConsoleHeroGame\Console-Hero-Game\bin\Debug\netcoreapp2.0\Console-Hero-Game.runtimeconfig.dev.json
+C:\examples\ConsoleHeroGame\Console-Hero-Game\bin\Debug\netcoreapp2.0\Console-Hero-Game.dll
+C:\examples\ConsoleHeroGame\Console-Hero-Game\bin\Debug\netcoreapp2.0\Console-Hero-Game.pdb
+C:\examples\ConsoleHeroGame\Console-Hero-Game\obj\Debug\netcoreapp2.0\Console-Hero-Game.csprojAssemblyReference.cache
+C:\examples\ConsoleHeroGame\Console-Hero-Game\obj\Debug\netcoreapp2.0\Console-Hero-Game.csproj.CoreCompileInputs.cache
+C:\examples\ConsoleHeroGame\Console-Hero-Game\obj\Debug\netcoreapp2.0\Console-Hero-Game.AssemblyInfoInputs.cache
+C:\examples\ConsoleHeroGame\Console-Hero-Game\obj\Debug\netcoreapp2.0\Console-Hero-Game.AssemblyInfo.cs
+C:\examples\ConsoleHeroGame\Console-Hero-Game\obj\Debug\netcoreapp2.0\Console-Hero-Game.dll
+C:\examples\ConsoleHeroGame\Console-Hero-Game\obj\Debug\netcoreapp2.0\Console-Hero-Game.pdb
