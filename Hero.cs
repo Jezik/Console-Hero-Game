@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace Console_Hero_Game
 {
@@ -6,16 +7,25 @@ namespace Console_Hero_Game
     {
         // Class fields
         private string nickname;
-        private float experience;
+        private int experience;
         private int level;
         private int numberOfKills;
 
         // Constrcutor. Nickname will be set during first run in a Main() method
-        public Hero(float experience, int level, int numberOfKills)
+        public Hero()
         {
-            Experience = experience;
-            Level = level;
-            NumberOfKills = numberOfKills;
+            Experience = 0;
+            NumberOfKills = 0;
+            Level = 1;
+
+            try {
+                Console.WriteLine("Enter the name of your character:");
+                Nickname = Console.ReadLine();
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Error occured " + e);
+            }
         }
 
         // Properties
@@ -38,7 +48,7 @@ namespace Console_Hero_Game
             } 
         }
 
-        public float Experience 
+        public int Experience 
         { 
             get
             {
@@ -62,7 +72,7 @@ namespace Console_Hero_Game
             set
             {
                 // TODO: implement more complex logic for level gain
-                level = (int)(Experience / 100) + 1;
+                level = Experience / 100 + 1;
             } 
         }
 
