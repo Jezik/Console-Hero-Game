@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Text;
 
 namespace Console_Hero_Game
 {
@@ -11,7 +12,7 @@ namespace Console_Hero_Game
         private int level;
         private int numberOfKills;
 
-        // Constrcutor. Nickname will be set during first run in a Main() method
+        // Constructor. Nickname will be set during first run in a Main() method
         public Hero()
         {
             Experience = 0;
@@ -20,11 +21,60 @@ namespace Console_Hero_Game
 
             try {
                 Console.WriteLine("Enter the name of your character:");
-                Nickname = Console.ReadLine();
+                for (int i=0; i<3; i++)
+                {
+                    string nick = Console.ReadLine();
+                    if (nick.Length == 0)
+                    {
+                        if (i == 2)
+                        {
+                            Console.WriteLine("Are you crazy Serega? ONE SYMBOL AT LEAST!!!");
+                            Console.WriteLine("Your nickname will be Serega");
+                            Nickname = "Serega";
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nickname must have one symbol at least. Try again.");
+                        }
+                    }
+                    else
+                    {
+                        Nickname = nick;
+                        i = 3;
+                    }
+                }
             }
             catch (IOException e)
             {
                 Console.WriteLine("Error occured " + e);
+            }
+        }
+
+        // Second constructor. Loading from a file
+        public Hero(string filepath)
+        {
+            using (StreamReader sr = new StreamReader(filepath, Encoding.Default))
+            {
+                string line;
+                while((line = sr.ReadLine()) != null)
+                {   
+                    string[] array = line.Split(" ");
+                    switch (Int32.Parse(array[0]))
+                    {
+                        case 1:
+                            Nickname = array[1];
+                            break;
+                        case 2:
+                            Experience = Int32.Parse(array[1]);
+                            break;
+                        case 3:
+                            NumberOfKills = Int32.Parse(array[1]);
+                            break;
+                        case 4:
+                            Level = Int32.Parse(array[1]);
+                            break;
+                    }
+                }
             }
         }
 
@@ -35,16 +85,9 @@ namespace Console_Hero_Game
             {
                 return nickname;
             }
-            set
-            {
-                if (value.Length == 0)
-                {
-                    Console.WriteLine("Nickname must have one symbol at least");
-                }
-                else
-                {
-                    nickname = value;
-                }
+            private set
+            {                
+                nickname = value;
             } 
         }
 
