@@ -24,4 +24,4 @@ Simple game to level up skills in a C# programming language
 - [x] Implement Hero class
 - [x] Implement Monster class
 - [x] Implement Game flow
-- [ ] Implement save/load game mechanic
+- [x] Implement save/load game mechanic
