@@ -58,7 +58,7 @@ namespace Console_Hero_Game
             {
                 if (value > 0)
                 {
-                    experience += value;
+                    experience = value;
                 }
             }
         }
@@ -86,7 +86,7 @@ namespace Console_Hero_Game
             {
                 if (value > 0)
                 {
-                    numberOfKills += value;
+                    numberOfKills = value;
                 }
             }
         }
