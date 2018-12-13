@@ -90,5 +90,13 @@ namespace Console_Hero_Game
                 }
             }
         }
+
+        public void ShowHeroStats()
+        {
+            Console.WriteLine("{0}, your current stats are: ", Nickname);
+            Console.WriteLine("Experince: {0}", Experience);
+            Console.WriteLine("Level: {0}", Level);
+            Console.WriteLine("Number of Kills: {0}\n", NumberOfKills);
+        }
     }
 }
